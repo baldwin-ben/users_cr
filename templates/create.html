@@ -8,8 +8,9 @@
 </head>
 <body>
     <h1>Add a user</h1>
+    <a href="/">Home</a> 
     <div>
-        <form action="/user/create" method="POST">
+        <form action="/users/create" method="POST"> <!--form action redirects page once form is submitted-->
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name">
             <label for="last_name">Last Name:</label>
@@ -18,7 +19,6 @@
             <input type="text" name="email">
             <button>Submit</button>
         </form>
-        <a href="user/new">Create</a> 
     </div>
 </body>
 </html>

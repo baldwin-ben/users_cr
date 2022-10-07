@@ -20,18 +20,18 @@
             <th>Created at</th>
             <th>Actions</th>
         </tr>
-            {% for dict in users %} 
+            {% for dict in users %} <!--this is iterating the users database-->
             <tr>
                 <td>{{ dict['id']}}</td> <!-- prints first name at dict=0 -->
-                <td>{{ dict['first_name'] }}</td> <!-- prints first name at dict=0 -->
+                <td>{{ dict['first_name'] }}</td>
                 <td>{{ dict['last_name'] }}</td>
-                <td>{{ dict['email'] }}</td> <!--prints key values for first and last name-->
+                <td>{{ dict['email'] }}</td>
                 <td>{{ dict['created_at'] }}</td>
-                <td><a href="#">Show</a>|<a href="#">Edit</a>|<a href="#">Delete</a></td>
+                <td><a href="/users/{{dict['id']}}">Show</a>|<a href="/users/{{dict['id']}}/edit">Edit</a>|<a href="/users/delete/{{dict['id']}}">Delete</a></td>
             </tr>
         {% endfor %}
         </table>
-<a href="user/new">Add new user</a>
+<a href="users/new">Add new user</a>
     </div>
 </body>
 </html>
